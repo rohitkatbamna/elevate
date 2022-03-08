@@ -1,0 +1,5 @@
+.hot-deals-add-hover-here:hover {
+	box-shadow: 5px 10px;
+	margin-left: 10px;
+	transition: 1s;
+}
