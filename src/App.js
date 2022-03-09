@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import "./App.css";
 import Cas from "./components/Cas/cas";
 import Features from "./components/features/features";
@@ -11,7 +12,9 @@ function App() {
 			<Navbar />
 			<Cas />
 			<Features />
-			<Hotdeals />
+			<Suspense fallback={<h1>FUN LOADING</h1>}>
+				<Hotdeals />
+			</Suspense>
 			<Footer />
 		</>
 	);
