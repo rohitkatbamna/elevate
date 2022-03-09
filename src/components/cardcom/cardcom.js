@@ -1,9 +1,12 @@
 import React from "react";
 import "./cardcom.css";
 
-function Cardcom({ data }) {
+function Cardcom({ data, id }) {
 	return (
-		<div className="card hot-data-add-hover-here" style={{ width: "18rem" }}>
+		<div
+			className="card hot-deals-add-hover-here"
+			style={{ width: "18rem" }}
+			key={id}>
 			<img
 				src={data.image}
 				className="card-img-top"
@@ -12,7 +15,8 @@ function Cardcom({ data }) {
 				width="300px"
 			/>
 			<div className="card-body">
-				<h5 className="card-title">{data.title}</h5>
+				<h3 className="card-title">{data.title}</h3>
+				<h6 className="card-subtitle">{data.description}</h6>
 				<h4 className="card-text mt-4 text-decoration-line-through">
 					$ {data.price}
 				</h4>

@@ -22,7 +22,7 @@ function Jewelery() {
 					{jewelery.map((deals) => {
 						return (
 							<div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5">
-								<Cardcom data={deals} />
+								<Cardcom data={deals} id={deals.id} />
 							</div>
 						);
 					})}

@@ -53,14 +53,14 @@ function Navbar() {
 										</Link>
 									</li>
 									<li>
-										<a className="dropdown-item" href="#">
-											Men's clothing
-										</a>
+										<Link to="/men" style={nonunder}>
+											<p className="dropdown-item">Men's clothing</p>
+										</Link>
 									</li>
 									<li>
-										<a className="dropdown-item" href="#">
-											Women's clothing
-										</a>
+										<Link to="/wom" style={nonunder}>
+											<p className="dropdown-item">Women's clothing</p>
+										</Link>
 									</li>
 								</ul>
 							</li>
