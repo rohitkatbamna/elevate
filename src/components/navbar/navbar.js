@@ -24,32 +24,33 @@ function Navbar() {
 					<div className="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul className="navbar-nav ms-auto me-auto fs-3 fw-normal">
 							<li className="nav-item">
-								<a className="nav-link active" aria-current="page" href="#">
-									Home
-								</a>
+								<Link to="/" style={nonunder}>
+									<p className="nav-link active" aria-current="page">
+										Home
+									</p>
+								</Link>
 							</li>
 							<li className="nav-item dropdown">
-								<a
+								<p
 									className="nav-link dropdown-toggle"
-									href="#"
 									id="navbarDropdownMenuLink"
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false">
 									Shop
-								</a>
+								</p>
 								<ul
 									className="dropdown-menu"
 									aria-labelledby="navbarDropdownMenuLink">
 									<li>
-										<Link to="/electronics">
+										<Link to="/electronics" style={nonunder}>
 											<p className="dropdown-item">Electronics</p>
 										</Link>
 									</li>
 									<li>
-										<a className="dropdown-item" href="#">
-											Jewelery
-										</a>
+										<Link to="/jewelery" style={nonunder}>
+											<p className="dropdown-item">Jewelery</p>
+										</Link>
 									</li>
 									<li>
 										<a className="dropdown-item" href="#">

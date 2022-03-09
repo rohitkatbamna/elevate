@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Cardcom from "../cardcom/cardcom";
 
-function Electronicscom() {
-	const [electronics, setElectronics] = useState([{}]);
+function Jewelery() {
+	const [jewelery, setJewelery] = useState([{}]);
 	function fetching() {
-		console.log("Begin fetching Electronics");
-		fetch("https://fakestoreapi.com/products/category/electronics")
+		console.log("Begin fetching jewelry");
+		fetch("https://fakestoreapi.com/products/category/jewelery")
 			.then((res) => res.json())
-			.then((json) => setElectronics(json))
+			.then((json) => setJewelery(json))
 			.catch((error) => console.log("error", error));
 	}
 	useEffect(fetching, []);
-	if (electronics[0].id === undefined) {
+	if (jewelery[0].id === undefined) {
 		return <h1 className="text-center mt-5 mb-5">Loading Hot Deals</h1>;
 	}
 	return (
@@ -19,7 +19,7 @@ function Electronicscom() {
 			<h1 className="text-center">HOT DEALS BUY NOW</h1>
 			<div className="container-fluid">
 				<div className="row ms-auto me-auto">
-					{electronics.map((deals) => {
+					{jewelery.map((deals) => {
 						return (
 							<div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5">
 								<Cardcom data={deals} />
@@ -31,4 +31,4 @@ function Electronicscom() {
 		</div>
 	);
 }
-export default Electronicscom;
+export default Jewelery;
