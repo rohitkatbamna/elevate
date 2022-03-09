@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./hotdeals.css";
 
 function Hotdeals() {
-	const [hotdeals, setHotdeals] = useState([]);
-	useEffect(() => {
+	const [hotdeals, setHotdeals] = useState([{}]);
+	function fetching() {
+		console.log("begin fetching");
 		fetch("https://fakestoreapi.com/products?limit=5")
 			.then((res) => res.json())
-			.then((json) => setHotdeals(json));
-		console.log(hotdeals);
-	}, []);
+			.then((json) => setHotdeals(json))
+			.catch((error) => console.log("error", error));
+	}
+	useEffect(fetching, []);
 
 	if (!hotdeals) {
 		return <h1>Loading Hot Deals</h1>;
@@ -23,7 +25,7 @@ function Hotdeals() {
 							<div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5">
 								<div
 									className="card hot-deals-add-hover-here"
-									style={{ width: "18rem" }}>
+									style={{ width: "18rem", height: "470px" }}>
 									<img
 										src={deals.image}
 										className="card-img-top"
@@ -33,7 +35,7 @@ function Hotdeals() {
 									/>
 									<div className="card-body">
 										<h5 className="card-title">{deals.title}</h5>
-										<h4 className="card-text">$ {deals.price}</h4>
+										<h4 className="card-text mt-4">$ {deals.price}</h4>
 									</div>
 								</div>
 							</div>
