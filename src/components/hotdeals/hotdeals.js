@@ -12,7 +12,7 @@ function Hotdeals() {
 	}
 	useEffect(fetching, []);
 
-	if (!hotdeals) {
+	if (!hotdeals[0]) {
 		return <h1>Loading Hot Deals</h1>;
 	}
 	return (
@@ -25,7 +25,7 @@ function Hotdeals() {
 							<div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-5">
 								<div
 									className="card hot-deals-add-hover-here"
-									style={{ width: "18rem", height: "470px" }}>
+									style={{ width: "18rem" }}>
 									<img
 										src={deals.image}
 										className="card-img-top"
@@ -35,7 +35,15 @@ function Hotdeals() {
 									/>
 									<div className="card-body">
 										<h5 className="card-title">{deals.title}</h5>
-										<h4 className="card-text mt-4">$ {deals.price}</h4>
+										<h4 className="card-text mt-4 text-decoration-line-through">
+											$ {deals.price}
+										</h4>
+										<h4 className="card-text mt-4">
+											$ {deals.price * (1 / 2)}
+											<span className="ms-2 fw-bold" style={{ color: "red" }}>
+												SPECIAL PRICE
+											</span>
+										</h4>
 									</div>
 								</div>
 							</div>
