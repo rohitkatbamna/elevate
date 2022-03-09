@@ -65,14 +65,18 @@ function Navbar() {
 								</ul>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">
-									Support
-								</a>
+								<Link to="/" style={nonunder}>
+									<p className="nav-link" aria-current="page">
+										Support
+									</p>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">
-									About Us
-								</a>
+								<Link to="/" style={nonunder}>
+									<p className="nav-link " aria-current="page">
+										About Us
+									</p>
+								</Link>
 							</li>
 						</ul>
 					</div>
