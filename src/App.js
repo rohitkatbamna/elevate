@@ -1,21 +1,17 @@
-import { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Cas from "./components/Cas/cas";
-import Features from "./components/features/features";
-import Footer from "./components/footer/footer";
-import Hotdeals from "./components/hotdeals/hotdeals";
-import Navbar from "./components/navbar/navbar";
+import Landing from "./pages/Landing/landing";
 
 function App() {
 	return (
 		<>
-			<Navbar />
-			<Cas />
-			<Features />
-			<Suspense fallback={<h1>FUN LOADING</h1>}>
-				<Hotdeals />
-			</Suspense>
-			<Footer />
+			<div>
+				<Router>
+					<Routes>
+						<Route path="/" element={<Landing />} exact />
+					</Routes>
+				</Router>
+			</div>
 		</>
 	);
 }

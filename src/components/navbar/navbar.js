@@ -41,17 +41,22 @@ function Navbar() {
 									aria-labelledby="navbarDropdownMenuLink">
 									<li>
 										<a className="dropdown-item" href="#">
-											Action
+											Electronics
 										</a>
 									</li>
 									<li>
 										<a className="dropdown-item" href="#">
-											Another action
+											Jewelery
 										</a>
 									</li>
 									<li>
 										<a className="dropdown-item" href="#">
-											Something else here
+											Men's clothing
+										</a>
+									</li>
+									<li>
+										<a className="dropdown-item" href="#">
+											Women's clothing
 										</a>
 									</li>
 								</ul>
