@@ -25,57 +25,28 @@ function Navbar() {
 						<ul className="navbar-nav ms-auto me-auto fs-3 fw-normal">
 							<li className="nav-item">
 								<Link to="/" style={nonunder}>
-									<p className="nav-link active" aria-current="page">
-										Home
-									</p>
+									<p className="nav-link">Home</p>
 								</Link>
 							</li>
-							<li className="nav-item dropdown">
-								<p
-									className="nav-link dropdown-toggle"
-									id="navbarDropdownMenuLink"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false">
-									Shop
-								</p>
-								<ul
-									className="dropdown-menu"
-									aria-labelledby="navbarDropdownMenuLink">
-									<li>
-										<Link to="/electronics" style={nonunder}>
-											<p className="dropdown-item">Electronics</p>
-										</Link>
-									</li>
-									<li>
-										<Link to="/jewelery" style={nonunder}>
-											<p className="dropdown-item">Jewelery</p>
-										</Link>
-									</li>
-									<li>
-										<Link to="/men" style={nonunder}>
-											<p className="dropdown-item">Men's clothing</p>
-										</Link>
-									</li>
-									<li>
-										<Link to="/wom" style={nonunder}>
-											<p className="dropdown-item">Women's clothing</p>
-										</Link>
-									</li>
-								</ul>
-							</li>
+
 							<li className="nav-item">
-								<Link to="/" style={nonunder}>
-									<p className="nav-link" aria-current="page">
-										Support
-									</p>
+								<Link to="/electronics" style={nonunder}>
+									<p className="nav-link">Electronics</p>
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/" style={nonunder}>
-									<p className="nav-link " aria-current="page">
-										About Us
-									</p>
+								<Link to="/wom" style={nonunder}>
+									<p className="nav-link">Women's clothing</p>
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to="/men" style={nonunder}>
+									<p className="nav-link">Men's clothing</p>
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link to="/jewelery" style={nonunder}>
+									<p className="nav-link">Jewelery</p>
 								</Link>
 							</li>
 						</ul>
