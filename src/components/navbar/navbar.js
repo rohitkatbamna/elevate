@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar() {
+	const nonunder = { textDecoration: "none" };
 	return (
 		<div className="navbar-all-of-it shadow sticky-top">
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<div className="container-fluid">
-					<a className="navbar-brand fs-1 fw-bold" href="#">
-						Fleno
-					</a>
+					<Link to="/" style={nonunder}>
+						<p className="navbar-brand fs-1 fw-bold">Fleno</p>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -40,9 +42,9 @@ function Navbar() {
 									className="dropdown-menu"
 									aria-labelledby="navbarDropdownMenuLink">
 									<li>
-										<a className="dropdown-item" href="#">
-											Electronics
-										</a>
+										<Link to="/electronics">
+											<p className="dropdown-item">Electronics</p>
+										</Link>
 									</li>
 									<li>
 										<a className="dropdown-item" href="#">
